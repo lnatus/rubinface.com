@@ -1,0 +1,74 @@
+@font-face {
+    font-family: chikenskratch;
+    src: url(../../fonts/chikenskratch.woff);
+}
+
+body {
+    background: #000000;
+    font-family: chikenskratch;
+    color: #FFF;
+    text-align: center;
+}
+
+a, 
+a:hover {
+    color: #FFF;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+input[type="text"],
+input[type="submit"] {
+    background: #3E4A4E;
+    width: 100%;
+    color: #FFF;
+    height: 42px;
+    border: none;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+    background: #DDD;
+    cursor: not-allowed;
+}
+
+.fab {
+    color: #FFF;
+    font-size: 48px;
+}
+
+.space-s {
+    margin-top: 15px;
+}
+
+.space-m {
+    margin-top: 30px;
+}
+
+.space-l {
+    margin-top: 60px;
+}
+
+.space-xl {
+    margin-top: 90px;
+}
+
+.space-xxl {
+    margin-top: 180px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    img {
+      max-width: 50%;
+    }
+}
