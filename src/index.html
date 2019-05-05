@@ -25,14 +25,16 @@
         <script type="text/javascript" src="scripts/dist/app.js"></script>
     </head>
     <body>
+        <div id="wrapper">
+        <div class="scratches" ></div>
         <div class="container">
-                <div class="row space-l">
+                <div id="header" class="row">
                     <div class="col-md-4 offset-md-4">
-                        <img src="images/rubinface.png" alt="Rubinface" />
+                        <img class="pulse space-l" src="images/rubinface.png" alt="Rubinface" />
                         <h1 class="space-m">RUBINFACE</h1>
                     </div>
                 </div>
-                <div class="row space-xl">
+                <div id="youtube" class="row space-xl">
                     <div class="col-md-4">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/23AjwaaDm2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -43,13 +45,23 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/23AjwaaDm2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="row space-xl">
+                <div id="music" class="row space-xl">
                     <div class="col-md-4 offset-md-4">
-                        <img src="images/rubinfaces.png" alt="Rubinfaces" />
+                        <img class="spin" src="images/rubinfaces.png" alt="Rubinfaces" />
                         <h2 class="space-m">gates of dawn</h2>
                     </div>
                 </div>
-                <div class="row space-l">
+                <div id="streaming" class="row space-m">
+                        <div class="col-md-4 offset-md-4">
+                            <a href="https://itunes.com" title="Rubinface on iTunes">
+                                <img src="images/itunes.svg" alt="Rubinface on iTunes" />
+                            </a>
+                            <a href="https://spotify.com" title="Rubinface on Spotify">
+                                <img src="images/spotify.svg" alt="Rubinface on Spotify" />
+                            </a>
+                        </div>
+                    </div>
+                <div id="social" class="row space-l">
                     <div class="col-md-4 offset-md-4">
                         <a href="https://www.soundcloud.com/rubinface/" title="Rubinface on Soundcloud">
                             <i class="fab fa-soundcloud"></i> 
@@ -65,24 +77,25 @@
                         </a>
                     </div>
                 </div>
-                <div class="row space-l">
+                <div id="newsletter" class="row space-l">
                     <div class="col-md-6 offset-md-3">
                         <form id="rf-subscribe-form" name="rf-subscribe-form" data-forge-name="rf-subscribe-form">
                             <div class="form-group">
-                                <input data-forge-name="email" type="text" class="form-control" id="email" aria-describedby="email" placeholder="email" >
+                                <label for="email">Newsletter</label>
+                                <input data-forge-name="email" type="text" class="form-control" id="email" aria-describedby="email" placeholder="Email" >
                             </div>
-                            <input class="space-s" type="submit" id="btnSubscribe" class="btn btn-pa" disabled="disabled" value="subscribe">
+                            <input class="space-s" type="submit" id="btnSubscribe" class="btn btn-pa" disabled="disabled" value="Subscribe">
                         </form>
                     </div>
                 </div>
-                <div class="row space-xxl">
+                <div id="footer" class="row space-xxl">
                         <div class="col-md-4 offset-md-4">
                             <a href="mailto:rubinface@gmail.com">
                                 <small>
                                     Contact
                                 </small>
                             </a>
-                            <span>&middot;</span>
+                            <small>&middot;</small>
                             <a href="/impressum.html">
                                 <small>
                                     Impressum
@@ -91,6 +104,7 @@
                         </div>
                     </div>
           </div>
+        </div>
           <script type="text/javascript">
                 $(document).ready(function(){
                 var app = new RF.AppService();

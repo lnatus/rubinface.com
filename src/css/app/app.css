@@ -3,16 +3,27 @@
     src: url(../../fonts/chikenskratch.woff);
 }
 
+
 body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
     background: #000000;
-    font-family: chikenskratch;
+    font-family: Arial, Helvetica, sans-serif;
     color: #FFF;
     text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: chikenskratch;
 }
 
 a, 
 a:hover {
     color: #FFF;
+    text-decoration: none;
 }
 
 img {
@@ -30,6 +41,7 @@ input[type="submit"] {
     color: #FFF;
     height: 42px;
     border: none;
+    padding: 10px;
 }
 
 input[type="submit"] {
@@ -39,6 +51,38 @@ input[type="submit"] {
 input[type="submit"]:disabled {
     background: #DDD;
     cursor: not-allowed;
+}
+
+label {
+    text-align: left;
+    display: block;
+}
+
+small {
+    color: #3E4A4E;
+}
+
+#wrapper {
+    padding: 0;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} 
+
+#social a {
+    padding: 10px;
+}
+
+.scratches {
+    background: url(../../images/scratches.svg) no-repeat;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 0;
 }
 
 .fab {
@@ -67,8 +111,71 @@ input[type="submit"]:disabled {
     margin-bottom: 30px;
 }
 
+.spin:hover {
+    animation: spin 6s infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: spin;
+    animation-name: spin;
+}
+
+.pulse:hover {
+    animation: pulse 3s infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
 @media (max-width: 768px) {
     img {
       max-width: 50%;
     }
+
+    .scratches {
+        display: none;
+    }
 }
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
